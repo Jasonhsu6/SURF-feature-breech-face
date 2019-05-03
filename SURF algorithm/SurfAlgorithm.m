@@ -3,14 +3,14 @@ clc;clear;close all;
 Case_dir ='C:\Users\Xugao\Documents\MATLAB\SURF feature\Breech face\*.mat';
 
 
-Case_files = dir(Case_dir);%case_dir行数
+Case_files = dir(Case_dir);%case directory
 
 
-Filenum = size(Case_files,1);%返回行数
+Filenum = size(Case_files,1);%number of files
 
 BreechFace = cell(Filenum,1);
 
-Bface = cell(20,1);%创建fpin为20*1的矩阵
+Bface = cell(20,1);%
 
 refer=18;
 
@@ -182,7 +182,7 @@ IPairs = matchFeatures(ISURFFeatures, JSURFFeatures,'Method','Exhaustive',...
 %     'Unique'           A logical scalar. Set this to true to return only
 %                        unique matches between features1 and features2.
 %   
-%                        Default: false
+%                        Default: falseS
 %  
 
 % Display putatively matched features
