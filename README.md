@@ -28,15 +28,17 @@ Please see this [Link](https://opencv-python-tutroals.readthedocs.io/en/latest/p
 
 The general process is first extract all of the SURF features in images. See the figure below, note that only 200 SURF points are shown. (The size of the circle represents the feature vector or the blob size).
 
-![](C:\Users\Xugao\AppData\Roaming\Typora\typora-user-images\1556851799395.png)
+**![SURF 1](../master/image-readme/SURF1.png)**
+
+**![SURF 2](../master/image-readme/SURF2.png)**
 
 After detecting SURF features of 2 images, make a primary match. See the figure below, the left and right are group 4 (7 and 8). The match is not satisfiable since the lines are very chaotic. 
 
-![1556852482293](C:\Users\Xugao\AppData\Roaming\Typora\typora-user-images\1556852482293.png)
+**![Primary](../master/image-readme/Primary match.png)**
 
 To further improve the match and exclude outliers, use [RANSAC](https://en.wikipedia.org/wiki/Random_sample_consensus) to get better matched features of SURF. The figure shows the result after RANSAC.
 
-![1556852605236](C:\Users\Xugao\AppData\Roaming\Typora\typora-user-images\1556852605236.png)
+**![RANSAC1](../master/image-readme/RANSAC1.png)**
 
 Another match is as follows. You can access all the matches in folder:
 
@@ -48,7 +50,7 @@ With Scale 8, Gassian smoothing level 4, Hessian threshold 1000
 
 With Scale 8, Gassian smoothing level 4, Hessian threshold 6500 (exclude edge features)
 
-![1556852704603](C:\Users\Xugao\AppData\Roaming\Typora\typora-user-images\1556852704603.png)
+**![RANSAC2](../master/image-readme/RANSAC2.png)**
 
 Also, the matched results (total pairs of matched feature points) can be accessed in excel files
 
